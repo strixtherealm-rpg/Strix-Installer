@@ -14,7 +14,7 @@ Name "Strix Installer"
 OutFile "strix_installer.exe"
 
 ; The default installation directory
-InstallDir %AppData%\.minecraft
+InstallDir $APPDATA\.minecraft
 
 ; Request application privileges for Windows Vista
 RequestExecutionLevel admin
@@ -37,7 +37,7 @@ Section "" ;No components page, name is not important
   ; Put file in SetOutPath location
   File /r "c:\Project\File\Location\*" ;adds all the files and subfolders from file path to installer
 
-SectionEnd ; end the section
+SectionEnd ;end the section
 
 ;--------------------------------
 
