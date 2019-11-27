@@ -31,11 +31,16 @@ Page instfiles
 ; The stuff to install
 Section "" ;No components page, name is not important
 
+  ; Removes directory mods from install dir
+  RMDir /r $INSTDIR\mods
   ; Set output path to the installation directory.
   SetOutPath $INSTDIR
 
   ; Put file in SetOutPath location
   File /r "c:\Project\File\Location\*" ;adds all the files and subfolders from file path to installer
+
+  ; Execute file post installation
+  Exec "$INSTDIR\forge.exe" 
 
 SectionEnd ;end the section
 
